@@ -3,7 +3,6 @@ import webbrowser
 import sys
 
 def news():
-    global website
     print("--=Cybersecurity News=--")
     print("1) Threatpost")
     print("2) The Hacker News")
@@ -29,9 +28,8 @@ def news():
         sys.exit()
 
 def cybersite(site):
-    site = website
     news_feed = feedparser.parse(site)
-    print(f"Here is the latest news from {news_feed.feed.title}")
+    print(f"Here is the latest news from {news_feed.feed.title.upper()}")
     article_link = []
     for i in range(5):
         article = news_feed.entries[i]
@@ -54,5 +52,4 @@ def cybersite(site):
         else:
             print("Invalid input1!\n")
 
-news() 
-cybersite(website)
+cybersite(news())

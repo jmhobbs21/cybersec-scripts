@@ -31,7 +31,7 @@ def cybersite(site):
     news_feed = feedparser.parse(site)
     print(f"Here is the latest news from {news_feed.feed.title.upper()}")
     article_link = []
-    for i in range(5):
+    for i in range(10):
         article = news_feed.entries[i]
         titles = article.title
         link = article.link
@@ -45,7 +45,7 @@ def cybersite(site):
         if user_link == 0:
             print("Goodbye. Have an excellent day! ")
             break
-        elif user_link >= 1 and user_link <= 5:
+        elif user_link >= 1 and user_link <= 10:
             int(user_link)
             webbrowser.open(article_link[user_link-1])
             article_link_click = True

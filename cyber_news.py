@@ -40,7 +40,7 @@ def cybersite(site):
     print()
     article_link_click = False
     while not article_link_click:
-        user_link = int(input("Which link would you like to view? Press 1-5 or 0 to exit "))
+        user_link = int(input("Which link would you like to view? Press 1-10 or 0 to exit "))
         print(user_link)
         if user_link == 0:
             print("Goodbye. Have an excellent day! ")

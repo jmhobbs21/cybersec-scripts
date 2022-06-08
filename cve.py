@@ -7,6 +7,3 @@ url = requests.get("http://www.cvedetails.com/json-feed.php?numrows=30&vendor_id
 for cve in url:
     print(json.dumps(cve, indent=4))
     print()
-
-
-
